@@ -1,6 +1,7 @@
 package com.example.chef
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -60,7 +61,8 @@ fun CategoryItem(category: Category,
                  navigatetoDetails:(Category)->Unit){
     Column(modifier = Modifier
         .padding(8.dp)
-        .fillMaxSize().clickable { navigatetoDetails(category) },
+        .fillMaxSize()
+        .clickable { navigatetoDetails(category) },
         horizontalAlignment = Alignment.CenterHorizontally)
     {
         Image(
@@ -69,6 +71,7 @@ fun CategoryItem(category: Category,
             modifier = Modifier
                 .fillMaxSize()
                 .aspectRatio(1f)
+                .border(2.dp, Color.Black)
         )
 
 
